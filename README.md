@@ -1,49 +1,66 @@
 # AI-Based Factory Management & Monitoring System
 
-An intermediate-level college project showcasing a full-stack factory management system. 
-Features real-time dashboard data, AI simulated rule-based monitoring, order processing with automated inventory deduction, and comprehensive CRUD modules.
+A modern, cloud-connected Full-Stack Industrial IoT & Factory Operations Management Platform featuring JWT-secured authentication, machine telemetrics, worker scheduling, production tracking, automated inventory deduction, and AI rule-based anomaly detection.
 
-## Features
-- **Dashboard**: High-level metrics, active worker counts, running machines.
-- **Machines**: Manage factory equipment (CRUD), track temperature and operating hours.
-- **Workers**: Manage staff, shifts, and attendance.
-- **Products & Inventory**: Manage products, stock levels, and low-stock limits.
-- **Orders**: Sales management with automatic stock deduction upon order completion.
-- **Production & Maintenance**: Track daily target vs actuals, and log machine maintenance.
-- **AI Monitoring**: Rule-based alerts for overheating machines, low stock, and stopped machines.
+---
 
-## Prerequisites
-- Node.js (v18+)
-- Java 17+
-- Maven
-- MySQL Server (running on `localhost:3306`)
+## 📌 Project Submission Details (Google Form Ready)
 
-## Setup Instructions
+### Project Abstract (Title)
+> **AI-Based Factory Management & Monitoring System**
 
-### 1. Database
-Ensure your MySQL server is running.
-Create a database named `factory_db` or let Hibernate autocreate it.
-Update credentials in `backend/src/main/resources/application.properties` if your MySQL user/pass is not `root`/`root`.
+### About Project
+> The **AI-Based Factory Management & Monitoring System** is an enterprise-grade full-stack smart manufacturing platform designed to streamline industrial workflows, equipment health diagnostics, and human resource tracking in real time. 
+> 
+> The system integrates a high-performance **React (Vite)** single-page frontend with a robust **Java Spring Boot 3** RESTful microservice architecture and a cloud-hosted **Aiven MySQL** database. Security is enforced through stateless **JWT (JSON Web Tokens)** and **BCrypt** password hashing, safeguarding operations across role-based tiers (Admin, Manager, Worker).
+> 
+> Core capabilities include real-time IoT machine condition and temperature threshold monitoring, automated AI rule-based anomaly detection for preventative maintenance, dynamic production capacity tracking, automated inventory recalculation upon sales order dispatch, and high-density operational telemetry dashboards powered by interactive data visualizations.
 
-### 2. Backend
-Navigate to the `backend` folder:
-```bash
-cd backend
-mvn clean install
-mvn spring-boot:run
-```
-The backend API runs on `http://localhost:8080`. Sample data is automatically seeded.
+### Frontend (GitHub Link)
+🔗 **[https://github.com/gudivenukasaikrishna7-lang/factory-management/tree/main/frontend](https://github.com/gudivenukasaikrishna7-lang/factory-management/tree/main/frontend)**
 
-### 3. Frontend
-Navigate to the `frontend` folder:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-Open `http://localhost:5173` in your browser.
+### Backend (GitHub Link)
+🔗 **[https://github.com/gudivenukasaikrishna7-lang/factory-management/tree/main/backend](https://github.com/gudivenukasaikrishna7-lang/factory-management/tree/main/backend)**
 
-## Tech Stack
-- Frontend: React + Vite + Bootstrap, Recharts, Lucide-React
-- Backend: Java Spring Boot, Spring Data JPA, MySQL
-- Architecture: RESTful APIs
+### Final Project Deployment Link
+🌐 **[https://frontend-psi-teal-37.vercel.app](https://frontend-psi-teal-37.vercel.app)**
+
+---
+
+## 🏗️ System Architecture & Tech Stack
+
+| Layer | Technologies & Tools |
+|---|---|
+| **Frontend UI/UX** | React 19, Vite 8, Bootstrap 5, Recharts (Data Viz), Lucide React Icons, Axios |
+| **Backend API** | Java 17/21, Spring Boot 3.2.4, Spring Data JPA, Hibernate ORM, Maven |
+| **Security & Auth** | Spring Security 6, Stateless JWT (JJWT), BCrypt Password Encryption, CORS |
+| **Database** | Aiven Cloud MySQL (Production with SSL/TLS) / Local MySQL (Development) |
+| **Cloud Hosting** | **Vercel** (Frontend SPA) + **Render** (Containerized Docker Backend API) |
+
+---
+
+## ⚙️ Key Modules & Capabilities
+
+1. **Secure Access & Identity Control:** 
+   - Role-based authorization (Admin / Manager / Worker).
+   - Dual-mode identifier login (supports either registered Username or Email).
+   - Protected route guards with automatic session expiration handling.
+2. **Real-time Machine Monitoring & IoT Telemetry:**
+   - Real-time diagnostics for operational temperature, active run-hours, and throughput.
+   - Status categorization (`Running`, `Idle`, `Maintenance`).
+3. **AI Rule-Based Anomaly Detection & Alerts:**
+   - Automated threshold scanning for overheating equipment (> 80°C), low stock anomalies, and unexpected line stoppages.
+   - One-click alert lifecycle management (`Unresolved` &rarr; `Resolved`).
+4. **Inventory & Order Automation:**
+   - Synchronized product catalog with automated stock deduction when purchase orders transition to `Completed`.
+5. **Workforce & Maintenance Operations:**
+   - Shift scheduling (Morning/Evening/Night) and employee attendance logs.
+   - Preventative maintenance scheduling and history logs.
+
+---
+
+## 🚀 Deployment Endpoints
+
+* **Live Frontend:** [https://frontend-psi-teal-37.vercel.app](https://frontend-psi-teal-37.vercel.app)
+* **Live Backend API:** [https://factory-management-backend-oi58.onrender.com](https://factory-management-backend-oi58.onrender.com)
+* **GitHub Repository:** [https://github.com/gudivenukasaikrishna7-lang/factory-management](https://github.com/gudivenukasaikrishna7-lang/factory-management)
