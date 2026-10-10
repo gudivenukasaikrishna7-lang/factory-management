@@ -1,0 +1,6 @@
+backend/target/
+frontend/
+.git/
+.gitignore
+README.md
+docs/
